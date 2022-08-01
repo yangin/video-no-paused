@@ -1,6 +1,5 @@
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    files: ["no-paused.js"],
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.executeScript({
+    file: "no-paused.js",
   });
 });
